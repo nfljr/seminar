@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" type="image/png" sizes="16x16" href="{{asset('assets/images/favicon.png ')}}">
-    <title>E-KUNKER</title>
+    <title>Seminar Nasioal</title>
     <!-- Bootstrap Core CSS -->
     <link href="{{asset('assets/bootstrap/dist/css/bootstrap.min.css ')}}" rel="stylesheet">
     <!-- Menu CSS -->
@@ -61,8 +61,6 @@
                         <!-- Logo text image you can use text also --><span class="hidden-xs">
                             <!--This is dark logo text--><img src="{{asset('assets/images/admin-text.png ')}}" alt="home"
                                 class="dark-logo" />
-                            <!--This is light logo text--><img src="{{asset('assets/images/admin-text-dark.png ')}}" alt="home"
-                                class="light-logo" />
                         </span> </a>
                 </div>
                 <!-- /Logo -->
@@ -102,13 +100,7 @@
                         <a href="{{ url('home') }}" class="waves-effect"><i class="fa fa-clock-o fa-fw" aria-hidden="true"></i>Dashboard</a>
                     </li>
                     <li>
-                        <a href="{{ url('umum') }}" class="waves-effect"><i class="fa fa-globe fa-fw    " aria-hidden="true"></i>Aspirasi</a>
-                    </li>
-                    <li>
-                        <a href= "{{ url('instansi') }}" class="waves-effect"><i class="fa fa-globe fa-fw" aria-hidden="true"></i>Instansi</a>
-                    </li>
-                    <li>
-                        <a href= "{{ url('dinas') }}" class="waves-effect"><i class="fa fa-globe fa-fw" aria-hidden="true"></i>Dinas</a>
+                        <a href="{{ url('umum') }}" class="waves-effect"><i class="fa fa-globe fa-fw    " aria-hidden="true"></i>Pendaftar</a>
                     </li>
                     <li>
                         <a href="{{ route('logout') }}" class="waves-effect"><i class="fa fa-columns fa-fw" aria-hidden="true"></i>Logout</a>
@@ -126,12 +118,12 @@
             <div class="container-fluid">
                 <div class="row bg-title">
                     <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
-                        <h4 class="page-title">Data Pengunjung dan Kunjungan</h4>
+                        <h4 class="page-title">Data Pendaftar Seminar Nasional</h4>
                     </div>
                     <div class="col-lg-9 col-sm-8 col-md-8 col-xs-12">
                         <ol class="breadcrumb">
                             <li><a href="#">Dashboard</a></li>
-                            <li class="active">Table Kunjungan</li>
+                            <li class="active">Tabel Pendaftar</li>
                             
                         </ol>
                         
@@ -147,20 +139,20 @@
                                 
                             </div>
                             
-                            <h3 class="box-title" style="text-align:center"><br>Data Kunjungan Aspirasi</h3>
+                            <h3 class="box-title" style="text-align:center"><br>Data Pendaftar</h3>
                             
                             <div class="table-responsive">
                             <table class="table table-bordered table-hover table striped" id="datatables"> 
                                     <thead>
                                         <tr>
                                             <th style="text-align:center">No</th>
-                                            <th style="text-align:center">NOMOR SURAT</th>
-                                            <th style="text-align:center">PENERIMA KUNJUNGAN</th>
-                                            <th style="text-align:center">SIFAT</th>
-                                            <th style="text-align:center">PERIHAL</th>
-                                            <th style="text-align:center">TANGGAL</th>
-                                            <th style="text-align:center">DURASI </th>
-                                            <th style="text-align:center">SNACK </th>
+                                            <th style="text-align:center">Nomor Telepon</th>
+                                            <th style="text-align:center">Nama Pendaftar</th>
+                                            <th style="text-align:center">Email</th>
+                                            <th style="text-align:center">Perihal</th>
+                                            <th style="text-align:center">Tanggal Seminar</th>
+                                            <th style="text-align:center">Alamat </th>
+                                            <th style="text-align:center">Ticket</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -185,101 +177,6 @@
                                     <li class="active">{{ $umums->links() }}</li>
                                     <li><a href="{{ route('cetak.pdf') }}" class="btn btn-primary" target="_blank">CETAK PDF</a></li>
                                     
-                                </ul>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-12 col-lg-12 col-sm-12">
-                        <div class="white-box">
-                            <div class="col-md-3 col-sm-4 col-xs-6 pull-right">
-                                
-                            </div>
-                            <h3 class="box-title" style="text-align:center"><br>Data Kunjungan Instansi</h3>
-                            <div class="table-responsive">
-                                <table class="table table-bordered table-hover table striped" id="datatables"> 
-                                    <thead>
-                                        <tr>
-                                            <th style="text-align:center">No</th>
-                                            <th style="text-align:center">NOMOR SURAT</th>
-                                            <th style="text-align:center">PENERIMA KUNJUNGAN</th>
-                                            <th style="text-align:center">SIFAT</th>
-                                            <th style="text-align:center">PERIHAL</th>
-                                            <th style="text-align:center">TANGGAL</th>
-                                            <th style="text-align:center">DURASI </th>
-                                            <th style="text-align:center">SNACK </th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                    @foreach($instansis as $p)
-										<tr>
-                                            <td style="text-align:center">{{ $p->id}}</td>
-                                            <td style="text-align:center">{{ $p->telp}}</td>
-											<td style="text-align:center">{{ $p->name}}</td>
-											<td style="text-align:center">{{ $p->email}}</td>
-                                            <td style="text-align:center">{{ $p->tujuan}}</td>
-											<td style="text-align:center">{{ $p->tanggal}}</td>
-                                            <td style="text-align:center">{{ $p->alamat}}</td>
-                                            <td style="text-align:center">{{ $p->snack}}</td>
-										</tr>
-									@endforeach
-                                    </tbody>
-                                </table>
-
-                                <ul class="pagination pull-right">
-                                    <!-- <li class="disabled"><span class="glyphicon glyphicon-chevron-left"></span></li> -->
-                                    <li class="active">{{ $instansis->links() }}</a></li>
-                                    <li><a href="{{ route('i.cetak.pdf') }}" class="btn btn-primary" target="_blank">CETAK PDF</a></li>
-                                    <!-- <li>{{ $umums->links() }}<span class="glyphicon glyphicon-chevron-right"></span></li> -->
-                                </ul>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-12 col-lg-12 col-sm-12">
-                        <div class="white-box">
-                            <div class="col-md-3 col-sm-4 col-xs-6 pull-right">
-                                
-                            </div>
-                            <h3 class="box-title" style="text-align:center"><br>Data Kunjungan Dinas</h3>
-                            <div class="table-responsive">
-                                <table class="table table-bordered table-hover table striped" id="datatables"> 
-                                    <thead>
-                                        <tr>
-                                            <th style="text-align:center">NO</th>
-                                            <th style="text-align:center">NOMOR SURAT</th>
-                                            <th style="text-align:center">PENERIMA KUNJUNGAN</th>
-                                            <th style="text-align:center">SIFAT</th>
-                                            <th style="text-align:center">PERIHAL</th>
-                                            <th style="text-align:center">TANGGAL</th>
-                                            <th style="text-align:center">DURASI </th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                    @foreach($kunjungans as $p)
-										<tr>
-                                            <td style="text-align:center">{{ $p->id}}</td>
-                                            <td style="text-align:center">{{ $p->nsurat}}</td>
-											<td style="text-align:center">{{ $p->penerima}}</td>
-											<td style="text-align:center">{{ $p->sifat}}</td>
-                                            <td style="text-align:center">{{ $p->perihal}}</td>
-											<td style="text-align:center">{{ $p->tanggal}}</td>
-                                            <td style="text-align:center">{{ $p->durasi}}</td>
-											
-										</tr>
-									@endforeach
-                                    </tbody>
-                                </table>
-
-                                <ul class="pagination pull-right">
-                                    <!-- <li class="disabled"><span class="glyphicon glyphicon-chevron-left"></span></li> -->
-                                    <li class="active">{{ $kunjungans->links() }}</a></li>
-                                    <li><a href="{{ route('d.cetak.pdf') }}" class="btn btn-primary" target="_blank">CETAK PDF</a></li>
-                                    <!-- <li>{{ $umums->links() }}<span class="glyphicon glyphicon-chevron-right"></span></li> -->
                                 </ul>
 
                             </div>

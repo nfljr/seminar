@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" type="image/png" sizes="16x16" href="{{asset('assets/images/favicon.png ')}}">
-    <title>Admin KUNKER</title>
+    <title>Admin Seminar Nasional</title>
     <!-- Bootstrap Core CSS -->
     <link href="{{asset('assets/bootstrap/dist/css/bootstrap.min.css ')}}" rel="stylesheet">
     <!-- Menu CSS -->
@@ -57,9 +57,8 @@
                         <!-- Logo text image you can use text also --><span class="hidden-xs">
                             <!--This is dark logo text--><img src="{{asset('assets/images/admin-text.png ')}}" alt="home"
                                 class="dark-logo" />
-                            <!--This is light logo text--><img src="{{asset('assets/images/admin-text-dark.png ')}}" alt="home"
-                                class="light-logo" />
-                        </span> </a>
+                            
+                            </span> </a>
                 </div>
                 <!-- /Logo -->
                 <ul class="nav navbar-top-links navbar-right pull-right">

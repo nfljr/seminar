@@ -2,7 +2,7 @@
 <html lang="en">
 
   <head>
-    <title>E &mdash; KUNKER</title>
+    <title>Seminar Nasional</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -58,9 +58,9 @@
             <div class="container">
               <div class="row align-items-center justify-content-center">
                 <div class="col-lg-6 text-center">
-                  <h1>Welcome to <span class="text-primary">E-KUNKER</span>  </h1>
-                  <p>Aplikasi Ini Berfungsi Untuk Mendata</p>
-                  <p class="mb-0"><a href="{{url('home')}}" class="btn btn-primary px-4 py-2 rounded-0">Lihat Daftar Kunjungan</a></p>
+                  <h1>Selamat Datang di Admin <span class="text-primary">Seminar Nasional</span>  </h1>
+                  <p>Aplikasi Ini Berfungsi Untuk Mendata Pendaftar Seminar Nasional</p>
+                  <p class="mb-0"><a href="{{url('home')}}" class="btn btn-primary px-4 py-2 rounded-0">skip</a></p>
                 </div>
               </div>
             </div>
@@ -72,8 +72,8 @@
               <div class="row align-items-center justify-content-center">
                 <div class="col-lg-6 text-center">
                   <h1>Sangat Memudahkan</h1>
-                  <p>Aplikasi Ini Bertujuan Untuk Mempermudah Pendataan Dalam Hal Tamu dan Kunjungan</p>
-                  <p class="mb-0"><a href="{{url('home')}}" class="btn btn-primary px-4 py-2 rounded-0">Lihat Daftar Kunjungan</a></p>
+                  <p>Aplikasi Ini Bertujuan Untuk Mempermudah Pendataan Pendaftar Seminar Nasional</p>
+                  <p class="mb-0"><a href="{{url('home')}}" class="btn btn-primary px-4 py-2 rounded-0">skip</a></p>
                 </div>
               </div>
             </div>
@@ -86,7 +86,7 @@
               <div class="col-lg-6 text-center">
                 <h1>Efektif dan Efisien</h1>
                 <p>Mempermudah dan Mempercepat Pengerjaan</p>
-                <p class="mb-0"><a href="{{url('home')}}" class="btn btn-primary px-4 py-2 rounded-0">Lihat Daftar Kunjungan</a></p>
+                <p class="mb-0"><a href="{{url('home')}}" class="btn btn-primary px-4 py-2 rounded-0">skip</a></p>
               </div>
             </div>
           </div>

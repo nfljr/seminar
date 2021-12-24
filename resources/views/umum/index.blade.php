@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" type="image/png" sizes="16x16" href="{{asset('assets/images/favicon.png ')}}">
-    <title>Admin DPRD</title>
+    <title>Admin Seminar Nasional</title>
     <!-- Bootstrap Core CSS -->
     <link href="{{asset('assets/bootstrap/dist/css/bootstrap.min.css ')}}" rel="stylesheet">
     <!-- Menu CSS -->
@@ -57,8 +57,6 @@
                         <!-- Logo text image you can use text also --><span class="hidden-xs">
                             <!--This is dark logo text--><img src="{{asset('assets/images/admin-text.png ')}}" alt="home"
                                 class="dark-logo" />
-                            <!--This is light logo text--><img src="{{asset('assets/images/admin-text-dark.png ')}}" alt="home"
-                                class="light-logo" />
                         </span> </a>
                 </div>
                 <!-- /Logo -->
@@ -90,13 +88,7 @@
                         <a href="{{ url('home') }}" class="waves-effect"><i class="fa fa-clock-o fa-fw" aria-hidden="true"></i>Dashboard</a>
                     </li>
                     <li>
-                        <a href="{{ url('umum') }}" class="waves-effect"><i class="fa fa-globe fa-fw    " aria-hidden="true"></i>Aspirasi</a>
-                    </li>
-                    <li>
-                        <a href= "{{ url('instansi') }}" class="waves-effect"><i class="fa fa-globe fa-fw" aria-hidden="true"></i>Instansi</a>
-                    </li>
-                    <li>
-                        <a href= "{{ url('dinas') }}" class="waves-effect"><i class="fa fa-globe fa-fw" aria-hidden="true"></i>Dinas</a>
+                        <a href="{{ url('umum') }}" class="waves-effect"><i class="fa fa-globe fa-fw    " aria-hidden="true"></i>Pendaftaran</a>
                     </li>
                     <li>
                         <a href="{{ route('logout') }}" class="waves-effect"><i class="fa fa-columns fa-fw" aria-hidden="true"></i>Logout</a>

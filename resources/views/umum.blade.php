@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" type="image/png" sizes="16x16" href="{{asset('assets/images/favicon.png ')}}">
-    <title>E-KUNKER</title>
+    <title>Seminar Nasional</title>
     <!-- Bootstrap Core CSS -->
     <link href="{{asset('assets/bootstrap/dist/css/bootstrap.min.css ')}}" rel="stylesheet">
     <!-- Menu CSS -->
@@ -57,8 +57,6 @@
                         <!-- Logo text image you can use text also --><span class="hidden-xs">
                             <!--This is dark logo text--><img src="{{asset('assets/images/admin-text.png ')}}" alt="home"
                                 class="dark-logo" />
-                            <!--This is light logo text--><img src="{{asset('assets/images/admin-text-dark.png ')}}" alt="home"
-                                class="light-logo" />
                         </span> </a>
                 </div>
                 <!-- /Logo -->
@@ -92,14 +90,7 @@
                     </li>
                     <li>
                         <a href="{{ url('umum') }}" class="waves-effect"><i class="fa fa-globe fa-fw"
-                                aria-hidden="true"></i>Aspirasi</a>
-                    </li>
-                    <li>
-                        <a href="{{ url('instansi') }}" class="waves-effect"><i class="fa fa-globe fa-fw"
-                                aria-hidden="true"></i>Instansi</a>
-                    </li>
-                    <li>
-                        <a href= "{{ url('dinas') }}" class="waves-effect"><i class="fa fa-globe fa-fw" aria-hidden="true"></i>Dinas</a>
+                                aria-hidden="true"></i>Pendaftar</a>
                     </li>
                     <li>
                         <a href="{{ route('logout') }}" class="waves-effect"><i class="fa fa-columns fa-fw" aria-hidden="true"></i>Logout</a>
@@ -120,16 +111,17 @@
             <div class="container-fluid">
                 <div class="row bg-title">
                     <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
-                        <h4 class="page-title">Aspirasi</h4>
+                        <h4 class="page-title">Pendaftar Seminar Nasional</h4>
                     </div>
                     <div class="col-lg-9 col-sm-8 col-md-8 col-xs-12">
                         
                         <ol class="breadcrumb">
                             <li><a href="#">Dashboard</a></li>
-                            <li class="active">Aspirasi</li>
+                            <li class="active">Seminar</li>
                         </ol>
                     </div>
                 </div>
+                <!--  -->
                 <!-- /.row -->
                 <!-- .row -->
                 <div class="row">
@@ -139,9 +131,9 @@
                             <form class="form-horizontal form-material" action="{{ route('umum.create') }}" method="post" enctype="multipart/form-data">
                             {{ csrf_field() }}
                                 <div class="form-group">
-                                    <label class="col-md-12">Penerima Pengunjung</label>
+                                    <label class="col-md-12">Nama Pendaftar</label>
                                     <div class="col-md-12">
-                                        <input type="text" placeholder="Masukkan Penerima Pengunjung" name="name" value="{{ old('name') }}"
+                                        <input type="text" placeholder="Masukkan Nama Pendaftar" name="name" value="{{ old('name') }}"
                                             class="form-control form-control-line @error('name') is-invalid @enderror">
                                             @error('name')
                                             <div class="invalid-feedback">{{ $message }}</div>
@@ -149,9 +141,9 @@
                                             </div>
                                 </div>
                                 <div class="form-group">
-                                    <label for="example-email" class="col-md-12">Sifat</label>
+                                    <label for="example-email" class="col-md-12">Email</label>
                                     <div class="col-md-12">
-                                        <input type="text" placeholder="Penting/Biasa  "
+                                        <input type="text" placeholder="ex : abcde123@gmail.com"
                                             class="form-control form-control-line @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}"
                                             id="example-email"> 
                                             @error('email')
@@ -160,16 +152,16 @@
                                             </div>
                                 </div>
                                 <div class="form-group">
-                                    <label class="col-md-12">Durasi</label>
+                                    <label class="col-md-12">alamat</label>
                                     <div class="col-md-12">
-                                        <input type="" value="" class="form-control form-control-line @error('alamat') is-invalid @enderror" placeholder="Masukkan Durasi Kunjungan/Jam" name="alamat" value="{{ old('alamat') }}">
+                                        <input type="" value="" class="form-control form-control-line @error('alamat') is-invalid @enderror" placeholder="Masukkan Alamat" name="alamat" value="{{ old('alamat') }}">
                                             @error('alamat')
                                             <div class="invalid-feedback">{{ $message }}</div>
                                             @enderror
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label class="col-md-12">Tanggal Kunjungan</label>
+                                    <label class="col-md-12">Tanggal Seminar</label>
                                     <div class="col-md-12">
                                         <input type="date" value="" class="form-control form-control-line @error('tanggal') is-invalid @enderror" name="tanggal" value="{{ old('tanggal') }}">
                                             @error('tanggal')
@@ -178,9 +170,9 @@
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label class="col-md-12">Nomor Surat</label>
+                                    <label class="col-md-12">Nomor Telepon</label>
                                     <div class="col-md-12">
-                                        <input type="number" placeholder="Masukkan Nomor Surat" name="telp" value="{{ old('telp') }}"
+                                        <input type="text" placeholder="Masukkan Nomor Surat" name="telp" value="{{ old('telp') }}"
                                             class="form-control form-control-line @error('telp') is-invalid @enderror"> 
                                             @error('telp')
                                             <div class="invalid-feedback">{{ $message }}</div>
@@ -188,9 +180,9 @@
                                             </div>
                                 </div>
                                 <div class="form-group">
-                                    <label class="col-md-12">Snack</label>
+                                    <label class="col-md-12">Ticket</label>
                                     <div class="col-md-12">
-                                        <input type="number" class="form-control form-control-line @error('snack') is-invalid @enderror" placeholder="Masukkan Jumlah Snack" name="snack" value="{{ old('snack') }}">
+                                        <input type="number" class="form-control form-control-line @error('snack') is-invalid @enderror" placeholder="Masukkan Jumlah ticket untuk ... orang" name="snack" value="{{ old('snack') }}">
                                             @error('snack')
                                             <div class="invalid-feedback">{{ $message }}</div>
                                             @enderror
@@ -199,7 +191,7 @@
                                 <div class="form-group">
                                     <label class="col-md-12">Perihal</label>
                                     <div class="col-md-12">
-                                        <textarea rows="5" class="form-control form-control-line @error('telp') is-invalid @enderror" placeholder="Masukkan Perihal" name="tujuan">
+                                        <textarea rows="5" class="form-control form-control-line @error('telp') is-invalid @enderror" placeholder="pendaftaran seminar nasional" name="tujuan">
                                         {{ old('tujuan') }}
                                         </textarea>
                                         @error('tujuan')
